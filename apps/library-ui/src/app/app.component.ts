@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'library.ui-root',
+  selector: 'library-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
