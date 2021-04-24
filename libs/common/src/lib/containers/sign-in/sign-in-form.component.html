@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <div class="container">
+    <h2>{{ 'AUTH.AUTH_FRIEND' | translate }}</h2>
+    <form [formGroup]="signInFormGroup" autocomplete="off" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <lib-input [id]="'login'" [type]="'text'" [placeholder]="'AUTH.LOGIN_PLACEHOLDER' | translate"
+          [hasOnInputEvent]="true" [error]="isInvalid('login')" formControlName="login" required></lib-input>
+        <label class="errors-label"
+          *ngIf="signInFormGroup.get('login').touched && signInFormGroup.get('login').invalid">{{
+          'AUTH.INVALID_LOGIN' | translate }}</label>
+      </div>
+      <div class="form-group">
+        <lib-input [id]="'password'" [type]="'password'" [placeholder]="'AUTH.PASSWORD_PLACEHOLDER' | translate"
+          [hasOnInputEvent]="true" [error]="isInvalid('password')" formControlName="password" required></lib-input>
+        <label class="errors-label"
+          *ngIf="signInFormGroup.get('password').touched && signInFormGroup.get('password').invalid">{{
+          'AUTH.INVALID_PASSWORD' | translate }}</label>
+      </div>
+      <div class="form-group btn-container">
+        <button mat-button type="submit" class="main-btn-primary" [disabled]="!signInFormGroup.valid">{{ 'AUTH.LOG_IN' |
+          translate }}</button>
+      </div>
+    </form>
+  </div>
+</div>

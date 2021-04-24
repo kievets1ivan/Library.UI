@@ -1,0 +1,16 @@
+{
+  "HEADER": {
+    "LIBRARY": "Библиотека"
+  },
+  "AUTH": {
+    "AUTH_FRIEND": "авторизируйся, друг",
+    "LOGIN_PLACEHOLDER": "ФИО читателя",
+    "PASSWORD_PLACEHOLDER": "Номер штрих-кода читателя",
+    "INVALID_LOGIN": "Неверный логин",
+    "INVALID_PASSWORD": "Неверный номер",
+    "LOG_IN": "Войти"
+  },
+  "MAIN_SCREEN": {
+    "LOG_IN": "Перейти в кабинет"
+  }
+}

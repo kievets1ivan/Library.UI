@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,900");
+@import "variables.scss";
+@import "elements.scss";
+
+@keyframes imgFadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    background-color: $bg-color;
+    overflow-x: hidden;
+}
+
+// body::-webkit-scrollbar-track
+// {
+//   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+//   background-color: #232222;
+// }
+
+// body::-webkit-scrollbar
+// {
+//   width: 0.5em;
+//   background-color: #232222;
+// }
+
+// body::-webkit-scrollbar-thumb
+// {
+//   border-radius: 2px;
+//   box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+//   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+//   background-color: #a88506;
+// }
+
+a.innerHTMLlink{
+    color: $primary-color;
+}
+
+[class*='-mob'] {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+  [class*='-mob'] {
+    display: flex;
+  }
+  [class*='-desk'] {
+    display: none !important;
+  }
+}

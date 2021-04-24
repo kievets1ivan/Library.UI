@@ -1,0 +1,16 @@
+{
+  "HEADER": {
+    "LIBRARY": "Library"
+  },
+  "AUTH": {
+    "AUTH_FRIEND": "authorize, friend",
+    "LOGIN_PLACEHOLDER": "....",
+    "PASSWORD_PLACEHOLDER": "Reader's barcode number",
+    "INVALID_LOGIN": "Invalid login",
+    "INVALID_PASSWORD": "Invalid number",
+    "LOG_IN": "Log In"
+  },
+  "MAIN_SCREEN": {
+    "LOG_IN": "..."
+  }
+}

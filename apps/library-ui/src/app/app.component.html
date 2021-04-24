@@ -1,0 +1,9 @@
+<lib-header>
+  <a *ngIf="isLoggedIn" [routerLink]="['/home']"><img src="assets/images/logo/logo.svg" alt="logo" class="logo"></a>
+  <a *ngIf="!isLoggedIn" [routerLink]="['/auth']"><img src="assets/images/logo/logo.svg" alt="logo" class="logo"></a>
+  <a>{{ navComponent | translate }}</a>
+</lib-header>
+
+<div class="router-wrapper">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>

@@ -26,6 +26,18 @@
   "projects": {
     "library-ui": {
       "tags": []
+    },
+    "common": {
+      "tags": []
+    },
+    "utils": {
+      "tags": []
+    },
+    "environment": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

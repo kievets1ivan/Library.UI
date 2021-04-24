@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <div class="img-container">
+    <img src="assets/images/robots/robot.svg" alt="robot" class="robot-img">
+  </div>
+  <div class="btn-container">
+    <button *ngIf="!isLoggedIn" mat-button [routerLink]="['/auth']" class="main-btn-primary">{{ 'MAIN_SCREEN.LOG_IN' |
+      translate}}</button>
+    <button *ngIf="isLoggedIn" mat-button [routerLink]="['/home']" class="main-btn-primary">{{ 'MAIN_SCREEN.LOG_IN' |
+      translate}}</button>
+  </div>
+</div>
