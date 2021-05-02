@@ -1,5 +1,10 @@
 {
   "HEADER": {
+    "AUTH": "Sign in",
+    "HOME": "Home",
+    "SERVICES": "Services",
+    "SEARCH": "Search",
+    "PROFILE": "Profile",
     "LIBRARY": "Library"
   },
   "AUTH": {
@@ -9,6 +14,31 @@
     "INVALID_LOGIN": "Invalid login",
     "INVALID_PASSWORD": "Invalid number",
     "LOG_IN": "Log In"
+  },
+  "HOME": {
+    "SECTIONS": "sections",
+    "ALL_SECTIONS": "all sections",
+    "NOVELTY": "NOVELTY_?",
+    "MORE": "More"
+  },
+  "SERVICES": {
+    "MENU": {
+      "TITLE": "choose what you need",
+      "TITLE_QUESTION": "Ask a question",
+      "DESC_QUESTION": "to a library employee",
+      "TITLE_UDK": "Determine the UDC",
+      "DESC_UDK": "of the author's article",
+      "TITLE_REPO": "Scientific archive ",
+      "DESC_REPO": "(repository)",
+      "TITLE_PUBLICATIONS": "Periodicals",
+      "DESC_PUBLICATIONS": "of newspapers and magazines",
+      "TITLE_CONTACTS": "Find out contacts",
+      "DESC_CONTACTS": "and more information"
+    }
+  },
+  "SEARCH": {
+    "TITLE": "let's some search",
+    "PLACEHOLDER": "Title, author, year of publication"
   },
   "MAIN_SCREEN": {
     "LOG_IN": "..."

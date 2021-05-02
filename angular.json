@@ -57,6 +57,7 @@
                 "input": "libs/assets/images",
                 "output": "assets/images"
               },
+              "apps/library-ui/src/favicon.ico",
               "apps/library-ui/src/manifest.webmanifest"
             ],
             "styles": [
@@ -74,8 +75,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/library-ui/src/environments/environment.ts",
-                  "with": "apps/library-ui/src/environments/environment.prod.ts"
+                  "replace": "libs/environment/src/lib/environment.ts",
+                  "with": "libs/environment/src/lib/environment.prod.ts"
                 }
               ],
               "optimization": true,

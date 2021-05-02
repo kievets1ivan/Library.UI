@@ -1,5 +1,10 @@
 {
   "HEADER": {
+    "AUTH": "Вхід",
+    "HOME": "Головна",
+    "SERVICES": "Послуги",
+    "SEARCH": "Ресурси",
+    "PROFILE": "Профіль",
     "LIBRARY": "Бібліотека"
   },
   "AUTH": {
@@ -9,6 +14,31 @@
     "INVALID_LOGIN": "Невірний логін",
     "INVALID_PASSWORD": "Невірний номер",
     "LOG_IN": "Увійти"
+  },
+  "HOME": {
+    "SECTIONS": "категорії",
+    "ALL_SECTIONS": "усі категорії",
+    "NOVELTY": "НОВИНКИ",
+    "MORE": "Більше"
+  },
+  "SERVICES": {
+    "MENU": {
+      "TITLE": "обирай необхідне",
+      "TITLE_QUESTION": "Поставити питання",
+      "DESC_QUESTION": "працівнику бібліотеки",
+      "TITLE_UDK": "Визначити УДК",
+      "DESC_UDK": "авторської статті",
+      "TITLE_REPO": "Науковий архів",
+      "DESC_REPO": "(репозитарій)",
+      "TITLE_PUBLICATIONS": "Періодичні видання",
+      "DESC_PUBLICATIONS": "газети та журнали",
+      "TITLE_CONTACTS": "Дізнатися контакти",
+      "DESC_CONTACTS": "та додаткову інформацію"
+    }
+  },
+  "SEARCH": {
+    "TITLE": "таакс, зараз пошукаємо",
+    "PLACEHOLDER": "Назва, автор, рік видання"
   },
   "MAIN_SCREEN": {
     "LOG_IN": "Перейти до кабінету"

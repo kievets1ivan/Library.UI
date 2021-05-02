@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="img-container">
+    <img [src]="imageService.getImage(document?.imageFileName)" alt="poster">
+  </div>
+  <div class="details-container">
+    <div class="info-container">
+      <div>{{ authorsString }}</div>
+      <div class="title">{{ titleString }}</div>
+    </div>
+    <div class="btn-container">
+      <button mat-button class="main-btn-primary ">{{ 'SA.DSADA' | translate}}</button>
+    </div>
+  </div>
+</div>
+<ng-content></ng-content>

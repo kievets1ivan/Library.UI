@@ -1,0 +1,40 @@
+<nav>
+  <mat-form-field appearance="fill" style="">
+    <mat-select [(ngModel)]="pageSize" (selectionChange)="applyPaging()">
+      <mat-option *ngFor="let c of [5,10,25]" [value]="c">{{c}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="pages-panel" *ngIf="pageSize">
+    <button class="page-link left-button" [class.disabled-button]="pageNumber === 1" (click)="prevPage()"></button>
+
+    <div class="page-picker" *ngIf="pageNumber > 3">
+      <input type="radio" [id]="'pageRadio'+1" [checked]="pageNumber === 1" (change)="goToPage(1)">
+      <label [for]="'pageRadio'+1">
+        <span>1</span>
+      </label>
+      <span class="dots" *ngIf="pageNumber > 4"> . . </span>
+    </div>
+
+    <div class="page-picker" *ngFor="let number of pagesToDisplay(pageNumber)">
+      <div class="wrapper" *ngIf="number > 0 && number <= totalPages">
+        <input type="radio" [id]="'pageRadio'+(number)" (change)="goToPage(number)" [checked]="number === pageNumber">
+        <label [for]="'pageRadio'+(number)">
+          <span>{{number}}</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="page-picker" *ngIf="pageNumber < totalPages-2">
+      <span class="dots" *ngIf="pageNumber < totalPages-3"> . . </span>
+      <input type="radio" [id]="'pageRadio'+totalPages" (change)="goToPage(totalPages)"
+        [checked]="totalPages === pageNumber">
+      <label [for]="'pageRadio'+totalPages">
+        <span>{{totalPages}}</span>
+      </label>
+    </div>
+
+    <button class="page-link right-button" [class.disabled-button]="pageNumber === totalPages"
+      (click)="nextPage()"></button>
+  </div>
+</nav>

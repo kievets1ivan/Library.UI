@@ -1,3 +1,10 @@
-<p>
-  home works! right
-</p>
+<library-top-sections></library-top-sections>
+<ng-container *ngIf="freshDocuments?.length">
+  <div class="header-container">{{ 'HOME.NOVELTY' | translate }}</div>
+  <lib-document-list [documents]="freshDocuments" [isShowed10Docs]="true"></lib-document-list>
+  <div class="btn-container">
+    <button mat-button *ngIf="!isShowed10Docs && freshDocuments.length === 4" type="button" class="main-btn"
+      (click)="show10Docs()">{{
+      'HOME.MORE' | translate }}</button>
+  </div>
+</ng-container>

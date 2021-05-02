@@ -1,0 +1,71 @@
+@import 'variables';
+
+.container {
+  display: flex;
+  font-family: 'Montserrat';
+  font-size: 13px;
+  font-weight: 500;
+  min-height: 73px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  // border-bottom: 1px solid black;
+
+  .img-container {
+    overflow: hidden;
+    border-radius: 15px;
+
+    //mob
+    position: relative;
+    min-width: 16.5vw;
+
+    img {
+      object-fit: cover;
+
+      //desk
+      // height: 100%;
+      // width: 16.5vw;
+
+      //mob
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    // border-bottom: 1px solid $text-color-primary;
+    // border-bottom: 1px solid black;
+    // margin-top: 10px;
+
+    margin-left: 10px;
+
+    // background-color: salmon;
+
+    .info-container {
+      padding-right: 10px;
+
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+
+      button {
+        display: flex;
+        padding: 0 12px;
+        height: 28px;
+      }
+    }
+  }
+}

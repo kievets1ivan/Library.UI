@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, forwardRef, Input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, forwardRef, Input, Output } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -12,6 +12,8 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   }]
 })
 export class InputComponent implements ControlValueAccessor, AfterViewInit {
+
+  @Output() btnClickEmitter = new EventEmitter();
 
   public value = '';
   public disabled = false;
@@ -62,5 +64,9 @@ export class InputComponent implements ControlValueAccessor, AfterViewInit {
     this.value = insideValue;
     this.onChange(insideValue);
     this.onTouched();
+  }
+
+  public btnClick(): void {
+    this.btnClickEmitter.emit();
   }
 }

@@ -1,3 +1,19 @@
-<p>
-  search works!
-</p>
+<div class="wrapper">
+  <h2>{{ 'SEARCH.TITLE' | translate }}</h2>
+  <form class="form" [formGroup]="searchFormGroup" autocomplete="off">
+    <lib-input [id]="'searchTerm'" [type]="'text'" [placeholder]="'SEARCH.PLACEHOLDER' | translate"
+      [hasOnInputEvent]="true" formControlName="searchTerm" [src]="'assets/images/search/search.svg'"
+      (btnClickEmitter)="onClick()" required>
+    </lib-input>
+  </form>
+
+  <h1 *ngIf="!searchTermWasEntered else content">{{ 'WELCOME TO DOC SEARCH' | translate }}</h1>
+  <ng-template #content>
+    <h1 *ngIf="!retrievedDocuments.length">{{ 'NO CONTENT' | translate }}</h1>
+    <lib-document-list [documents]="retrievedDocuments"></lib-document-list>
+  </ng-template>
+  <lib-pagination [hidden]="!searchTermWasEntered || !retrievedDocuments || !retrievedDocuments.length"
+    [getPaginationResults]="documentService.getDocumentsBySearchTerm.bind(documentService)"
+    [searchTerm]="inputSearchTerm">
+  </lib-pagination>
+</div>

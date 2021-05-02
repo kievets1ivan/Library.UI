@@ -6,9 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
 
+
   .router-wrapper {
-    // background-color: darkolivegreen;
+    background-color: lightblue; // remove
     height: 100%;
+    margin: 0 20px;
   }
 
   .footer {
@@ -31,6 +33,3 @@
     }
   }
 }
-
-
-

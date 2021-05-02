@@ -24,16 +24,26 @@
     border-color: $primary-color;
     caret-color: $primary-color;
   }
+
+  button {
+    display: flex;
+    align-items: center;
+
+    border: none;
+    background-color: inherit;
+    margin-right: 10px;
+    height: 40px;
+  }
 }
 
 .form-input{
-  // width: 90%;
+  width: 100%;
   // padding: .375rem .75rem;
   line-height: 2;
-  margin-left: 10px;
+  margin: 0 10px;
   background-color: inherit;
   border: none;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat'; // change
   font-size: 16px;
   font-weight: 500;
   // color: #ffffff;
@@ -52,9 +62,9 @@
 }
 
 .form-icon {
-  width: 28px;
-  height: 28px;
-  margin-right: 3%;
+  width: 30px;
+  height: 30px;
+  filter: invert(78%) sepia(2%) saturate(22%) hue-rotate(340deg) brightness(83%) contrast(95%);;
 }
 
 .error-block {

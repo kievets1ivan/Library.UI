@@ -9,7 +9,6 @@ export const environment = {
     author: `${BASE_URL}/author`,
     document: `${BASE_URL}/document`,
     section: `${BASE_URL}/section`,
-    subsection: `${BASE_URL}/subsection`,
     user: `${BASE_URL}/user`,
   }
 };

@@ -1,5 +1,5 @@
 <label *ngIf="labelText" class="input-label" [for]="id">{{ labelText }}</label>
 <div class="input-block" [ngClass]="{'error-block': error}">
   <input class="form-input" [type]="type" [id]="id" [placeholder]="placeholder" [(ngModel)]="value">
-  <img *ngIf="src" [src]="src" [alt]="alt" class="form-icon">
+  <button *ngIf="src" type="submit" (click)="btnClick()"><img [src]="src" [alt]="alt" class="form-icon"></button>
 </div>

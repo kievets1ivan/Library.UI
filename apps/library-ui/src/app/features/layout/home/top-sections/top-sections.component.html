@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <div class="header-container">
+    <div>{{ 'HOME.SECTIONS' | translate }}</div>
+    <!-- link to page with all categories  -->
+    <a [routerLink]="['/']">{{ 'HOME.ALL_SECTIONS' | translate }}</a>
+  </div>
+  <div class="top-section-container">
+    <div class="section" *ngFor="let section of topSections">
+      <!-- link to page with all categories  -->
+      <a [routerLink]="['/']"><img [src]="imageService.getImage(section?.imageFileName)" alt="poster">
+        <div class="section-name">{{ section.name}}</div>
+      </a>
+    </div>
+  </div>
+</div>

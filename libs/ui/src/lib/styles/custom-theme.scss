@@ -21,3 +21,51 @@
 
 //   @include angular-material-theme($my-alternate-theme);
 // }
+
+//custom mat-select start
+
+.mat-form-field-wrapper {
+  padding-bottom: 0;
+  font-size: 20px;
+}
+
+.mat-form-field-flex {
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.mat-form-field-infix {
+  border: none;
+  padding: 0 !important;
+}
+
+.mat-select {
+  color: $primary-color;
+}
+
+.mat-select-arrow-wrapper {
+  transform: none !important;
+}
+
+.cdk-overlay-pane {
+  width: 50px;
+  background-color: $bg-color;
+  border-radius: 5px;
+  border: 1px solid $primary-color;
+}
+
+.mat-select-panel {
+  min-width: 100% !important;
+}
+
+.mat-option {
+  padding: 0 10px !important;
+  justify-content: center !important;
+  // color: $primary-color;
+}
+
+.mat-option-text {
+  flex-grow: 0 !important;
+}
+
+// custom mat-select end

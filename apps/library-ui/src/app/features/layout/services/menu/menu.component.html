@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h2>{{ 'SERVICES.MENU.TITLE' | translate }}</h2>
+  <div class="menu-container">
+    <a [routerLink]="['question']" class="question">
+      <span class="title">{{ 'SERVICES.MENU.TITLE_QUESTION' | translate }}</span>
+      <span class="desc">{{ 'SERVICES.MENU.DESC_QUESTION' | translate }}</span>
+    </a>
+    <a [routerLink]="['udk']" class="udk">
+      <span class="title">{{ 'SERVICES.MENU.TITLE_UDK' | translate }}</span>
+      <span class="desc">{{ 'SERVICES.MENU.DESC_UDK' | translate }}</span>
+    </a>
+    <a href='http://www.repository.hneu.edu.ua/' class="repo">
+      <span class="title">{{ 'SERVICES.MENU.TITLE_REPO' | translate }}</span>
+      <span class="desc">{{ 'SERVICES.MENU.DESC_REPO' | translate }}</span>
+    </a>
+    <a [routerLink]="['publications']" class="publications">
+      <span class="title">{{ 'SERVICES.MENU.TITLE_PUBLICATIONS' | translate }}</span>
+      <span class="desc">{{ 'SERVICES.MENU.DESC_PUBLICATIONS' | translate }}</span>
+    </a>
+    <a [routerLink]="['contacts']" class="contacts">
+      <span class="title">{{ 'SERVICES.MENU.TITLE_CONTACTS' | translate }}</span>
+      <span class="desc">{{ 'SERVICES.MENU.DESC_CONTACTS' | translate }}</span>
+    </a>
+  </div>
+</div>

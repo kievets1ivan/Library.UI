@@ -1,0 +1,5 @@
+<lib-document-item class="document-item" *ngFor="let document of documents" [document]="document">
+  <div class="border-container"
+    [ngStyle]="{'display': documents.indexOf(document) === documents.length - 1 ? 'none' : 'block' }">
+  </div>
+</lib-document-item>
