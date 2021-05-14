@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   public headerServices = 'HEADER.SERVICES';
   public headerSearch = 'HEADER.SEARCH';
   public headerProfile = 'HEADER.PROFILE';
+  public headerDocumentDescription = 'HEADER.DOCUMENT_DESCRIPTION';
 
   public headerTitle = '';
 
@@ -33,7 +34,7 @@ export class AppComponent implements OnInit {
 
     this.jwt.setToken(this.cookie.get('Token'));
 
-    this.translate.addLangs(['en', 'ru', 'ua']);
+    this.translate.addLangs(['en', 'ua']);
     this.translate.setDefaultLang('ua');
     // const browserLang = this.translate.getBrowserLang();
     // this.translate.use(browserLang.match(/en|uk|ru/) ? browserLang : 'en');
@@ -42,7 +43,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        console.log(event.url);
 
         switch (event.url) {
           case '/':
@@ -55,14 +55,18 @@ export class AppComponent implements OnInit {
           case '/home/main':
             this.headerTitle = this.headerHome;
             break;
-          case '/home/services':
-            this.headerTitle = this.headerServices;
-            break;
           case '/home/search':
             this.headerTitle = this.headerSearch;
             break;
           case '/home/profile':
             this.headerTitle = this.headerProfile;
+            break;
+          default:
+            if (event.url.startsWith('/home/services')) {
+              this.headerTitle = this.headerServices;
+            } else if (event.url.startsWith('/home/search/document')) {
+              this.headerTitle = this.headerDocumentDescription;
+            }
             break;
         }
       }

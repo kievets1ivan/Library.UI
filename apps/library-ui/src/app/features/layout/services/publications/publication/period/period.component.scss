@@ -1,0 +1,33 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+
+  // background-color: burlywood;
+
+  mat-form-field {
+    width: 85px;
+  }
+
+  .publications-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+
+    // background-color: cornflowerblue;
+
+    .publication {
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+      button{
+        height: 30px;
+        line-height: normal;
+        min-width: 0;
+        width: 44px;
+        padding: 0 5px;
+        color: $black !important;
+      }
+    }
+  }
+}

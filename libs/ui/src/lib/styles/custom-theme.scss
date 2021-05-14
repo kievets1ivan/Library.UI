@@ -26,21 +26,24 @@
 
 .mat-form-field-wrapper {
   padding-bottom: 0;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .mat-form-field-flex {
-  border-radius: 0 !important;
+  // border-radius: 0 !important;
   padding: 0 !important;
 }
 
 .mat-form-field-infix {
-  border: none;
-  padding: 0 !important;
+  border: solid $black 2px;
+  border-radius: 10px;
+  // padding: 0 !important;
+  padding: 2px 10px !important;
 }
 
 .mat-select {
-  color: $primary-color;
+  font-family: 'Open Sans';
+  color: $black;
 }
 
 .mat-select-arrow-wrapper {

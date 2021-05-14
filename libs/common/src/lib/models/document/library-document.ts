@@ -10,6 +10,7 @@ export interface LibraryDocument {
   language: string;
   imageFileName: string;
   documentFileName: string;
+  pages: number;
   isFresh: boolean;
   section?: Section;
   authorDocuments: AuthorDocument[];

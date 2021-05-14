@@ -1,3 +1,24 @@
-<p>
-  udk works!
-</p>
+<div class="wrapper">
+  <lib-title [title]="'SERVICES.UDK.TITLE'"></lib-title>
+  <form [formGroup]="udkFormGroup" autocomplete="off" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <lib-input [id]="'title'" [type]="'text'" [placeholder]="'SERVICES.UDK.INPUT_PLACEHOLDER' | translate"
+        [hasOnInputEvent]="true" [error]="isInvalid('title')" formControlName="title" required></lib-input>
+      <label class="errors-label" *ngIf="isSubmitClicked && udkFormGroup.get('title').errors?.required">{{
+        'INVALID_FIELD' | translate }}</label>
+    </div>
+    <div class="textarea-container">
+      <lib-textarea [id]="'annotation'" [placeholder]="'SERVICES.UDK.TEXTAREA_PLACEHOLDER' | translate"
+        [maxlength]="maxAnnotationLength" [hasOnInputEvent]="true" [error]="isInvalid('annotation')"
+        formControlName="annotation" required>
+      </lib-textarea>
+      <label class="errors-label"
+        [ngStyle]="{'visibility': isSubmitClicked && udkFormGroup.get('annotation').errors?.required === true ? 'visible' : 'hidden' }">{{
+        'INVALID_FIELD' | translate }}</label>
+    </div>
+
+    <div class="btn-container">
+      <button mat-button type="submit" class="main-btn-primary">{{ 'SERVICES.UDK.SEND' | translate }}</button>
+    </div>
+  </form>
+</div>

@@ -10,5 +10,8 @@ export const environment = {
     document: `${BASE_URL}/document`,
     section: `${BASE_URL}/section`,
     user: `${BASE_URL}/user`,
+    questionAnswer: `${BASE_URL}/questionAnswer`,
+    udk: `${BASE_URL}/udk`,
+    publicationPeriods: `${BASE_URL}/publicationPeriods`,
   }
 };

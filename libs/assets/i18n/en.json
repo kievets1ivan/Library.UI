@@ -5,6 +5,7 @@
     "SERVICES": "Services",
     "SEARCH": "Search",
     "PROFILE": "Profile",
+    "DOCUMENT_DESCRIPTION": "Document",
     "LIBRARY": "Library"
   },
   "AUTH": {
@@ -22,6 +23,47 @@
     "MORE": "More"
   },
   "SERVICES": {
+    "QUESTION": {
+      "TITLE": "ask a question",
+      "PLACEHOLDER": "Type a question here...",
+      "SEND": "Send"
+    },
+    "UDK": {
+      "TITLE": "determine the UDC",
+      "INPUT_PLACEHOLDER": "Document title",
+      "TEXTAREA_PLACEHOLDER": "Document annotation",
+      "SEND": "Send"
+    },
+    "PUBLICATION": {
+      "TITLE": "wow, publications"
+    },
+    "CONTACTS": {
+      "TITLE": "contact us",
+      "MODE": "The mode of operation of the library:",
+      "PHONE_LABEL": "Contact phone:",
+      "EMAIL_LABEL": "Contact email:",
+      "ADDRESS_LABEL": "Library address:",
+      "PHONE": "702-07-19",
+      "EMAIL": "library@ksue.edu.ua",
+      "ADDRESS": "61166, Kharkiv, 9a Nauki Ave.",
+      "DAYS": {
+        "MONDAY": "MO",
+        "TUESDAY": "TU",
+        "WEDNESDAY": "WE",
+        "THURSDAY": "TH",
+        "FRIDAY": "FR",
+        "SATARDAY": "SA",
+        "SUNDAY": "SU"
+      },
+      "TIME": {
+        "MONDAY": "9AM - 5PM",
+        "TUESDAY": "9AM - 5PM",
+        "WEDNESDAY": "9AM - 3PM",
+        "THURSDAY": "9AM - 5PM",
+        "FRIDAY": "9AM - 5PM",
+        "DAY_OFF": "Day off"
+      }
+    },
     "MENU": {
       "TITLE": "choose what you need",
       "TITLE_QUESTION": "Ask a question",
@@ -40,6 +82,7 @@
     "TITLE": "let's some search",
     "PLACEHOLDER": "Title, author, year of publication"
   },
+  "INVALID_FIELD": "Empty field",
   "MAIN_SCREEN": {
     "LOG_IN": "..."
   }

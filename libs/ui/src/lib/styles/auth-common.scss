@@ -7,19 +7,19 @@
 .wrapper {
   display: flex;
   justify-content: center;
-
-  // font-family: "Montserrat";
   padding: 0 40px;
+
   // background-color: black;
 
   .container {
-    // background-color: aquamarine;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     width: 100%;
     max-width: 400px;
     height: calc(100vh - 200px);
+
+    // background-color: aquamarine;
 
     form {
       .btn-container {
@@ -34,7 +34,7 @@
           display: inline-block;
           margin-top: 5px;
           margin-left: 15px;
-          font-size: 13px;
+          font-size: 14px;
           font-weight: 400;
           color: $attention-color;
         }

@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="container">
-    <h2>{{ 'AUTH.AUTH_FRIEND' | translate }}</h2>
+    <lib-title [title]="'AUTH.AUTH_FRIEND'"></lib-title>
     <form [formGroup]="signInFormGroup" autocomplete="off" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <lib-input [id]="'login'" [type]="'text'" [placeholder]="'AUTH.LOGIN_PLACEHOLDER' | translate"

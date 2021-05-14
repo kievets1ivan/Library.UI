@@ -1,0 +1,58 @@
+@import 'variables';
+
+:host{
+  height: 100%;
+
+  .wrapper{
+    position: relative;
+    height: 100%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    &:focus-within {
+      border-color: $primary-color;
+    }
+
+    textarea {
+      position: absolute;
+      width: 100%;
+      background-color: $bg-input-color;
+      font-family: 'Open Sans';
+      font-size: 17px;
+      font-weight: 400;
+      color: $text-color-secondary;
+      border-radius: 8px;
+      border: none;
+      padding: 10px 10px;
+      resize: none;
+      height: inherit;
+
+      &::placeholder {
+        font-size: 15px;
+        color: $bg-input-placeholder-color;
+      }
+
+      &:focus {
+        caret-color: $primary-color;
+        // caret-color: transparent;
+        outline: none;
+      }
+    }
+
+    .counter {
+      right: 10px;
+      bottom: 10px;
+      position: absolute;
+      color: $text-color-secondary;
+      font-family: 'Roboto';
+      font-size: 13px;
+      font-weight: 400;
+    }
+  }
+
+  .error-block {
+    transition: 0.3s;
+    border: solid 1px $attention-color;
+  }
+}
+

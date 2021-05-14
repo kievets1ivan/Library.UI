@@ -1,0 +1,19 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  height: 80px;
+  font-size: 24px;
+  font-weight: 700;
+
+  background-image: url('/assets/images/background-title/title.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .title-container {
+    width: 185px;
+  }
+}

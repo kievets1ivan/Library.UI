@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <mat-form-field appearance="fill">
+    <mat-select [(ngModel)]="currentPeriod" (selectionChange)="selectYear()">
+      <mat-option *ngFor="let period of publication?.periods" [value]="period">{{period.year}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <div class="publications-container">
+    <div class="publication" *ngFor="let item of currentPeriod?.publications" (click)="selectPublication(item)">
+      <button mat-button class="main-btn">{{ item.number }}</button>
+    </div>
+  </div>
+</div>

@@ -7,11 +7,6 @@
   height: 100%;
   padding-bottom: 20px;
 
-  h2 {
-    margin: 35px 0;
-    width: 150px;
-  }
-
   .menu-container{
     height: inherit;
     display: grid;
@@ -22,7 +17,6 @@
 
     a {
       display: flex;
-      // align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
       border-radius: 15px;
@@ -34,13 +28,11 @@
         &.title {
           font-size: 15px;
           font-weight: 600;
-          // color: saddlebrown;
         }
 
         &.desc {
           font-size: 12px;
           font-weight: 400;
-          // color: #579640;
         }
       }
 

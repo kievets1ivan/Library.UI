@@ -1,3 +1,5 @@
-<p>
-  publications works!
-</p>
+<div class="wrapper">
+  <lib-title [title]="'SERVICES.PUBLICATION.TITLE'"></lib-title>
+  <library-publication class="publication-item" *ngFor="let publication of publications" [publication]="publication">
+  </library-publication>
+</div>

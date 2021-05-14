@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
@@ -14,8 +14,6 @@ import { DocumentService, LibraryDocument, PaginationComponent, PaginationServic
 export class SearchComponent implements OnInit, OnDestroy {
 
   @ViewChild('lib-pagination') paginationComponent: PaginationComponent<LibraryDocument>;
-
-  @Output() serchTermEmitter: EventEmitter<string> = new EventEmitter();
 
   public retrievedDocuments: LibraryDocument[];
   public inputSearchTerm = '';

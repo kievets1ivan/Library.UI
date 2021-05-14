@@ -1,3 +1,32 @@
-<p>
-  contacts works!
-</p>
+<div class="wrapper">
+  <lib-title [title]="'SERVICES.CONTACTS.TITLE'"></lib-title>
+  <div class="info-container">
+    <div class="mode-container">
+      <div class="info-item">{{ 'SERVICES.CONTACTS.MODE' | translate }}</div>
+      <div class="time-container">{{ selectedDay.time | translate }}</div>
+      <ul>
+        <li *ngFor="let day of week; let i = index">
+          <input type="radio" name="week" value="{{day.day}}" [checked]="(i === 0)" (change)="selectDay(day)" /><span>{{
+            day.day | translate }}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="contact-container">
+      <div class="info-item">{{ 'SERVICES.CONTACTS.PHONE_LABEL' | translate }}</div>
+      <div class="contact-value">{{ 'SERVICES.CONTACTS.PHONE' | translate }}</div>
+    </div>
+    <div class="contact-container">
+      <div class="info-item">{{ 'SERVICES.CONTACTS.EMAIL_LABEL' | translate }}</div>
+      <div class="contact-value">{{ 'SERVICES.CONTACTS.EMAIL' | translate }}</div>
+    </div>
+    <div class="mode-container">
+      <div class="info-item">{{ 'SERVICES.CONTACTS.ADDRESS_LABEL' | translate }}</div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2563.861861038691!2d36.22216531588424!3d50.01394432660128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a12385b9990d%3A0xc6e2fe8bfeea1722!2z0L_RgNC-0YHQv9C10LrRgiDQndCw0YPQutC4LCA5YSwg0KXQsNGA0LrRltCyLCDQpdCw0YDQutGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1suk!2sua!4v1620847600803!5m2!1suk!2sua"
+        class="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="address-container">
+        <div class="contact-value">{{ 'SERVICES.CONTACTS.ADDRESS' | translate }}</div>
+      </div>
+    </div>
+  </div>
+</div>

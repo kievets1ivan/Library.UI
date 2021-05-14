@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h2>{{ 'SEARCH.TITLE' | translate }}</h2>
+  <lib-title [title]="'SEARCH.TITLE'"></lib-title>
   <form class="form" [formGroup]="searchFormGroup" autocomplete="off">
     <lib-input [id]="'searchTerm'" [type]="'text'" [placeholder]="'SEARCH.PLACEHOLDER' | translate"
       [hasOnInputEvent]="true" formControlName="searchTerm" [src]="'assets/images/search/search.svg'"

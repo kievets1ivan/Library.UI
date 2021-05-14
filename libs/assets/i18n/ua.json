@@ -5,13 +5,14 @@
     "SERVICES": "Послуги",
     "SEARCH": "Ресурси",
     "PROFILE": "Профіль",
+    "DOCUMENT_DESCRIPTION": "Опис документу",
     "LIBRARY": "Бібліотека"
   },
   "AUTH": {
     "AUTH_FRIEND": "авторизуйся, друже",
     "LOGIN_PLACEHOLDER": "ПІБ читача",
     "PASSWORD_PLACEHOLDER": "Номер штрих-коду читача",
-    "INVALID_LOGIN": "Невірний логін",
+    "INVALID_LOGIN": "Невірно введено ПІБ",
     "INVALID_PASSWORD": "Невірний номер",
     "LOG_IN": "Увійти"
   },
@@ -22,6 +23,47 @@
     "MORE": "Більше"
   },
   "SERVICES": {
+    "QUESTION": {
+      "TITLE": "пиши питання для ІДВ",
+      "PLACEHOLDER": "Текст питання...",
+      "SEND": "Надіслати"
+    },
+    "UDK": {
+      "TITLE": "час визначити УДК",
+      "INPUT_PLACEHOLDER": "Назва документа",
+      "TEXTAREA_PLACEHOLDER": "Анотація документа",
+      "SEND": "Надіслати"
+    },
+    "PUBLICATION": {
+      "TITLE": "огооо, скільки видань"
+    },
+    "CONTACTS": {
+      "TITLE": "нас дуже легко знайти",
+      "MODE": "Режим роботи бібліотеки:",
+      "PHONE_LABEL": "Контактний телефон:",
+      "EMAIL_LABEL": "Контактний E-mail:",
+      "ADDRESS_LABEL": "Адреса бібліотеки:",
+      "PHONE": "702-07-19",
+      "EMAIL": "library@ksue.edu.ua",
+      "ADDRESS": "61166, Харків, пр.Науки 9-а",
+      "DAYS": {
+        "MONDAY": "ПН",
+        "TUESDAY": "ВТ",
+        "WEDNESDAY": "СР",
+        "THURSDAY": "ЧТ",
+        "FRIDAY": "ПТ",
+        "SATARDAY": "СБ",
+        "SUNDAY": "НД"
+      },
+      "TIME": {
+        "MONDAY": "9:00 - 17:00",
+        "TUESDAY": "9:00 - 17:00",
+        "WEDNESDAY": "9:00 - 15:00",
+        "THURSDAY": "9:00 - 17:00",
+        "FRIDAY": "9:00 - 17:00",
+        "DAY_OFF": "Вихідний"
+      }
+    },
     "MENU": {
       "TITLE": "обирай необхідне",
       "TITLE_QUESTION": "Поставити питання",
@@ -40,6 +82,7 @@
     "TITLE": "таакс, зараз пошукаємо",
     "PLACEHOLDER": "Назва, автор, рік видання"
   },
+  "INVALID_FIELD": "Поле не може бути порожнім",
   "MAIN_SCREEN": {
     "LOG_IN": "Перейти до кабінету"
   }

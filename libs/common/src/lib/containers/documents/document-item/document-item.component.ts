@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
+import { DocumentService } from '../../../services/document.service';
 import { ImageService } from '../../../services/image.service';
 import { LibraryDocument } from '../../../models/document/library-document';
 
@@ -18,12 +19,17 @@ export class DocumentItemComponent implements OnInit {
 
   constructor(
     public imageService: ImageService,
+    public documentService: DocumentService,
     private translate: TranslateService,
   ) { }
 
   ngOnInit() {
     this.cutAuthors();
     this.cutTitle();
+  }
+
+  public lol(): void {
+    window.open(this.document.documentFileName);
   }
 
   public cutAuthors(): void {

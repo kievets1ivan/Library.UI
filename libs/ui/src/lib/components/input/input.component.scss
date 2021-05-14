@@ -14,11 +14,8 @@
   justify-content: space-between;
   height: 50px;
   background-color: $bg-input-color;
-  // background-color: $text-color-primary;
-  border-radius: 20px;
-  // border: solid 2px $text-color-secondary;
-  border: solid 1px $bg-input-placeholder-color;
-  // border: solid 1px $bg-color;
+  border-radius: 8px;
+  border: 1px solid transparent;
   transition: 0.4s;
   &:focus-within {
     border-color: $primary-color;
@@ -30,7 +27,7 @@
     align-items: center;
 
     border: none;
-    background-color: inherit;
+    background-color: initial;
     margin-right: 10px;
     height: 40px;
   }
@@ -38,14 +35,13 @@
 
 .form-input{
   width: 100%;
-  // padding: .375rem .75rem;
   line-height: 2;
   margin: 0 10px;
-  background-color: inherit;
+  background-color: initial;
   border: none;
-  font-family: 'Montserrat'; // change
-  font-size: 16px;
-  font-weight: 500;
+  font-family: 'Open Sans'; // change
+  font-size: 17px;
+  font-weight: 400;
   // color: #ffffff;
   color: $text-color-secondary;
   transition: 0.2s;
@@ -57,7 +53,6 @@
 
 	&:focus {
 		outline: none;
-    color: $primary-color;
 	}
 }
 
@@ -68,5 +63,6 @@
 }
 
 .error-block {
-  border-color: $attention-color;
+  transition: 0.3s;
+  border: solid 1px $attention-color;
 }

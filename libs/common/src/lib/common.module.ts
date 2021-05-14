@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders } from '@angular/compiler/src/core';
@@ -18,11 +19,16 @@ import { DocumentService } from './services/document.service';
 import { SectionService } from './services/section.service';
 import { PaginationService } from './containers/pagination/pagination.service';
 import { ImageService } from './services/image.service';
+import { QuestionAnswerService } from './services/question-answer.service';
+import { UdkService } from './services/udk.service';
+import { PublicationPeriodsService } from './services/publication-periods.service';
+import { DocumentDescriptionComponent } from './containers/documents/document-description/document-description.component';
 
 const MODULES = [
   CommonModule,
   HttpClientModule,
   ReactiveFormsModule,
+  RouterModule,
   FormsModule,
   UiModule,
   UtilsModule,
@@ -32,6 +38,7 @@ const COMPONENTS = [
   SignInFormComponent,
   DocumentListComponent,
   DocumentItemComponent,
+  DocumentDescriptionComponent,
   PaginationComponent,
 ]
 
@@ -56,8 +63,11 @@ export class CommonLibraryModule {
         DocumentService,
         ImageService,
         JWTService,
-        PaginationService,
+        PublicationPeriodsService,
+        QuestionAnswerService,
         SectionService,
+        UdkService,
+        PaginationService,
       ]
     };
   }

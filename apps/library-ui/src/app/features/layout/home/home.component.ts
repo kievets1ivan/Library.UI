@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   public ngOnInit(): void {
-    this.get3FreshDocuments();
+    this.get4FreshDocuments();
   }
 
   public show10Docs(): void {
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
     this.get10FreshDocuments();
   }
 
-  private get3FreshDocuments(): void {
+  private get4FreshDocuments(): void {
     this.documentService.getDocuments({ isFresh: true, takeAmount: 4 }).subscribe((documents: LibraryDocument[]) => {
       this.freshDocuments = documents;
     });

@@ -1,15 +1,14 @@
-<div class="container">
-  <div class="img-container">
-    <img [src]="imageService.getImage(document?.imageFileName)" alt="poster">
-  </div>
-  <div class="details-container">
-    <div class="info-container">
-      <div>{{ authorsString }}</div>
-      <div class="title">{{ titleString }}</div>
+<a [routerLink]="['/home/search/document', document?.id]" routerLinkActive="active-link">
+  <div class="container">
+    <div class="img-container">
+      <img [src]="imageService.getImage(document?.imageFileName)" alt="poster">
     </div>
-    <div class="btn-container">
-      <button mat-button class="main-btn-primary ">{{ 'SA.DSADA' | translate}}</button>
+    <div class="details-container">
+      <div class="info-container">
+        <div class="author">{{ authorsString }}</div>
+        <div class="title">{{ titleString }}</div>
+      </div>
     </div>
   </div>
-</div>
+</a>
 <ng-content></ng-content>

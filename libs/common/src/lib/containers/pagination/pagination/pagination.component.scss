@@ -6,16 +6,19 @@ nav {
   flex-direction: row;
   font-family: 'Montserrat';
   margin-top: 10px;
+
   // background-color: red;
 
   mat-form-field {
+    width: 55px;
+
     // background-color: blue;
-    width: 50px;
   }
 
   .pages-panel {
     display: flex;
     margin-left: 20px;
+
     // background-color: green;
   }
 }
