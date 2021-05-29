@@ -4,9 +4,59 @@
     "HOME": "Головна",
     "SERVICES": "Послуги",
     "SEARCH": "Ресурси",
-    "PROFILE": "Профіль",
+    "PROFILE": "Особистий профіль",
     "DOCUMENT_DESCRIPTION": "Опис документу",
+    "SECTIONS": "Категорії",
     "LIBRARY": "Бібліотека"
+  },
+  "DOCUMENT": {
+    "BOOK": "Книга",
+    "ARTICLE": "Стаття",
+    "CODE_LABEL": "Код документу:",
+    "TYPE_LABEL": "Вид документу:",
+    "YEAR_LABEL": "Рік видання:",
+    "PUBLISHER_LABEL": "Видавництво:",
+    "LANGUAGE_LABEL": "Мова:",
+    "PAGES_LABEL": "Обсяг:",
+    "OPEN": "Відкрити у PDF-форматі",
+    "SHORT_YEAR": " р.",
+    "SHORT_AMOUNT": " стор."
+  },
+  "POPUP": {
+    "QUESTION": "Питання надіслане. Дякую!",
+    "UDK": "Запит на УДК надіслано. Дякую!",
+    "USER": "Зміни збережені. Дякую!",
+    "ANSWER": "Повідомлення надіслано!",
+    "DUPLICATE_LOGIN": "Такі дані вже використовуються! Змініть ім'я, прізвище або по-батькові!",
+    "UNKNOWN_ERROR": "Щось пішло не так! Вибачте!"
+  },
+  "PROFILE": {
+    "UDK_LABEL": "Індекс УДК",
+    "QUESTION_LABEL": "Питання",
+    "PROFILE": "Профіль",
+    "MESSAGE": "Повідомлення...",
+    "UDK": {
+      "ID": "Запит на визначення УДК №",
+      "TITLE": "Назва роботи",
+      "SUCCESS": "Вітаємо! За вашим запитом було визначено наступний індекс УДК"
+    },
+    "QUESTION": {
+      "ID": "Питання до бібліографа №"
+    },
+    "INFO": {
+      "STATUS_LABEL": "Статус:",
+      "NUMBER_LABEL": "Код картки:",
+      "LASTNAME_LABEL": "Прізвище:",
+      "FIRSTNAME_LABEL": "Ім'я:",
+      "PATRONYMIC_LABEL": "По-батькові:",
+      "FACULTY_LABEL": "Факультет:",
+      "COURSE_LABEL": "Курс:",
+      "SPECIALITY_LABEL": "Спеціальність:",
+      "DEPARTMENT_LABEL": "Відділ:",
+      "POSITION_LABEL": "Посада:",
+      "PHONENUMBER_LABEL": "Телефон:",
+      "SAVE": "Зберегти зміни"
+    }
   },
   "AUTH": {
     "AUTH_FRIEND": "авторизуйся, друже",
@@ -83,6 +133,7 @@
     "PLACEHOLDER": "Назва, автор, рік видання"
   },
   "INVALID_FIELD": "Поле не може бути порожнім",
+  "INVALID_PHONE_PATTERN": "+(111)11-111-11-11",
   "MAIN_SCREEN": {
     "LOG_IN": "Перейти до кабінету"
   }

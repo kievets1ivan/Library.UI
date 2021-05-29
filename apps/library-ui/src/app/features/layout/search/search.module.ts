@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { CommonLibraryModule } from '@lib/common';
 import { UiModule } from '@lib/ui';
@@ -14,6 +15,7 @@ const MODULES = [
   UiModule,
   CommonLibraryModule,
   TranslateModule.forChild(),
+  MatProgressSpinnerModule,
 ]
 
 const COMPONENTS = [

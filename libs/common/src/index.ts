@@ -7,10 +7,12 @@ export * from './lib/services/auth.service';
 export * from './lib/services/document.service';
 export * from './lib/services/image.service';
 export * from './lib/services/jwt.service';
+export * from './lib/services/popup.service';
 export * from './lib/services/publication-periods.service';
 export * from './lib/services/question-answer.service';
 export * from './lib/services/section.service';
 export * from './lib/services/udk.service';
+export * from './lib/services/user.service';
 export * from './lib/containers/pagination/pagination.service';
 
 export * from './lib/models/author/author';
@@ -24,6 +26,7 @@ export * from './lib/models/publications/publication';
 export * from './lib/models/publications/publication-periods';
 
 export * from './lib/models/query-parameters/document-filter-query-params';
+export * from './lib/models/query-parameters/search-document-query-parameters';
 
 export * from './lib/models/pagination/pagination-response';
 

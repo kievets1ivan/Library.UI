@@ -1,0 +1,15 @@
+<a [routerLink]="['/home/profile/udks', udk?.id]" routerLinkActive="active-link">
+  <div class="container">
+    <div class="img-container">
+      <img src="/assets/images/profile/udk.svg" alt="title">
+    </div>
+    <div class="details-container">
+      <div class="info-container">
+        <div class="number">{{ 'PROFILE.UDK.ID' | translate }}{{ udk?.id }}</div>
+        <div class="title">{{ 'PROFILE.UDK.TITLE' | translate }} &laquo;{{ udk?.title }}&raquo;</div>
+      </div>
+    </div>
+    <div *ngIf="isAdmin && !udk?.udk" class="status-container"><span></span></div>
+  </div>
+</a>
+<ng-content></ng-content>

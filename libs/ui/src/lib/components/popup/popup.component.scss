@@ -1,0 +1,25 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 163px;
+      height: 128px;
+      background-color: transparent;
+    }
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 600;
+  }
+
+}

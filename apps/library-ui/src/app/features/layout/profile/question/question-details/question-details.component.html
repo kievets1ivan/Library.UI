@@ -1,0 +1,15 @@
+<a [routerLink]="['/home/profile/questions', question?.id]" routerLinkActive="active-link">
+  <div class="container">
+    <div class="img-container">
+      <img src="/assets/images/profile/question.svg" alt="title">
+    </div>
+    <div class="details-container">
+      <div class="info-container">
+        <div class="number">{{ 'PROFILE.QUESTION.ID' | translate }}{{ question?.id }}</div>
+        <div class="question">&laquo;{{ question?.question }}&raquo;</div>
+      </div>
+    </div>
+    <div *ngIf="isAdmin && !question?.answer" class="status-container"><span></span></div>
+  </div>
+</a>
+<ng-content></ng-content>

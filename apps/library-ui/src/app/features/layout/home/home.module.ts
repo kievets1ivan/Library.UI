@@ -7,6 +7,8 @@ import { CommonLibraryModule } from '@lib/common';
 import { HomeComponent } from './home.component';
 import { HomeRoutingModule } from './routes/home-routing.module';
 import { TopSectionsComponent } from './top-sections/top-sections.component';
+import { SectionListComponent } from './section-list/section-list.component';
+import { SectionComponent } from './section/section.component';
 
 const MODULES = [
   CommonModule,
@@ -17,6 +19,8 @@ const MODULES = [
 const COMPONENTS = [
   HomeComponent,
   TopSectionsComponent,
+  SectionListComponent,
+  SectionComponent,
 ]
 
 @NgModule({

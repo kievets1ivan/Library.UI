@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="top-container">
+    <a [routerLink]="['/home/profile/questions']"><img src="assets/images/profile/arrow.svg" alt="arrow"></a>
+    <div class="id">{{ 'PROFILE.QUESTION.ID' | translate }}{{ question?.id }}</div>
+  </div>
+  <div class="content-container">
+    <div class="dialog-container">
+      <div class="request-container"
+        [ngStyle]="{'align-self': isAdmin ? 'flex-start' : 'flex-end', 'background': isAdmin ? 'url(\'/assets/images/profile/question-left-tail.svg\') 0 0/100% 100% no-repeat' : 'url(\'/assets/images/profile/question-right-tail.svg\') 0 0/100% 100% no-repeat' }">
+        <div class="question">{{ question?.question }}</div>
+      </div>
+      <div *ngIf="question?.answer" class="answer-container"
+        [ngStyle]="{'align-self': isAdmin ? 'flex-end' : 'flex-start', 'background': isAdmin ? 'url(\'/assets/images/profile/answer-right-tail-fixed.svg\') 0 0/100% 100% no-repeat' : 'url(\'/assets/images/profile/answer-left-tail.svg\') 0 0/100% 100% no-repeat' }">
+        <div class="answer">{{ question?.answer }}</div>
+      </div>
+    </div>
+
+    <form *ngIf="isAdmin && !question?.answer" class="form" [formGroup]="answerFormGroup" autocomplete="off">
+      <lib-input [id]="'answer'" [type]="'text'" [placeholder]="'PROFILE.MESSAGE' | translate" [hasOnInputEvent]="true"
+        formControlName="answer" [maxlength]="250" required>
+      </lib-input>
+      <label class="errors-label" *ngIf="isSubmitClicked && answerFormGroup.get('answer').errors?.required">{{
+        'INVALID_FIELD' | translate }}</label>
+    </form>
+  </div>
+</div>

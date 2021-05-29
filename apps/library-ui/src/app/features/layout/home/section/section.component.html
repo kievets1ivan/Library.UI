@@ -1,0 +1,10 @@
+<a [routerLink]="['/home/search/section']" [queryParams]="{ id: section?.id }" routerLinkActive="active-link">
+  <div class="container">
+    <div class="img-container">
+      <img [src]="imageService.getImage(section?.imageFileName)" alt="poster">
+    </div>
+    <div class="name-container">
+      <div class="name">{{ section?.name }}</div>
+    </div>
+  </div>
+</a>

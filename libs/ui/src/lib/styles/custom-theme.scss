@@ -50,8 +50,12 @@
   transform: none !important;
 }
 
+.mat-select-value {
+  max-width: min-content !important;
+}
+
 .cdk-overlay-pane {
-  width: 50px;
+  min-width: 50px;
   background-color: $bg-color;
   border-radius: 5px;
   border: 1px solid $primary-color;

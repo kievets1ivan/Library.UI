@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <library-question-details class="question-container" *ngFor="let question of retrievedQuestions"
+    [question]="question">
+    <div class="border-container"
+      [ngStyle]="{'display': retrievedQuestions.indexOf(question) === retrievedQuestions.length - 1 ? 'none' : 'block' }">
+    </div>
+  </library-question-details>
+  <lib-pagination *ngIf="isAdmin" [hidden]="!retrievedQuestions || !retrievedQuestions.length"
+    [getPaginationResults]="queastionAnswerService.getQuestionAnswersForAdmin.bind(queastionAnswerService)">
+  </lib-pagination>
+  <lib-pagination *ngIf="!isAdmin" [hidden]="!retrievedQuestions || !retrievedQuestions.length"
+    [getPaginationResults]="queastionAnswerService.getQuestionAnswers.bind(queastionAnswerService)">
+  </lib-pagination>
+</div>

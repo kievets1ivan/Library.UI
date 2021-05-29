@@ -1,0 +1,88 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  // background-color: darkseagreen;
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+    // background-color: cadetblue;
+
+    .img-container {
+      overflow: hidden;
+      border-radius: 10px;
+
+      //mob
+      position: relative;
+      min-width: 100px;
+      min-height: 100px;
+
+      img {
+        object-fit: cover;
+
+        //desk
+        // height: 100%;
+        // width: 16.5vw;
+
+        //mob
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .second-main-container{
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+
+      .login-container {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .number-container {
+        font-family: 'Open Sans';
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .links-container {
+    display: flex;
+    height: 40px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+
+    a  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      width: 100%;
+      color: $text-color-secondary;
+    }
+
+    .active-link {
+      border-bottom: 2px solid;
+      font-weight: 600;
+      filter: $activate-link-color;
+    }
+  }
+
+  .router-wrapper {
+    height: 100%;
+
+    // background-color: cadetblue;
+  }
+}

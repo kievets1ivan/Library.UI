@@ -4,22 +4,55 @@ nav {
   display: flex;
   justify-content: flex-end;
   flex-direction: row;
-  font-family: 'Montserrat';
-  margin-top: 10px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px 0;
 
   // background-color: red;
 
   mat-form-field {
     width: 55px;
-
-    // background-color: blue;
   }
 
   .pages-panel {
     display: flex;
-    margin-left: 20px;
+    margin-left: 15px;
 
-    // background-color: green;
+    .page-picker {
+      display: flex;
+      flex-direction: row;
+
+      input {
+        display: none;
+        // width: 20px;
+        // height: 20px;
+        // opacity: 0;
+        position: absolute;
+        background: transparent;
+      }
+
+      input:checked ~ label {
+        cursor: default;
+        span {
+          color: $primary-color;
+        }
+      }
+      label {
+        cursor: pointer;
+        margin: 0 7px;
+        // background-color: transparent;
+        // border: none;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        color: #585858;
+      }
+      .dots {
+        color: #585858;
+      }
+    }
   }
 }
 
@@ -42,7 +75,7 @@ nav {
 }
 
 .left-button {
-  margin-right: 10px;
+  // margin-right: 5px;
   &::after {
     border-top: none;
     border-right: none;
@@ -50,7 +83,7 @@ nav {
 }
 
 .right-button {
-  margin-left: 10px;
+  // margin-left: 5px;
   &::after {
     border-bottom: none;
     border-left: none;
@@ -61,44 +94,6 @@ nav {
   cursor: default;
   &::after {
     border-color: #585858;
-    // border-color: $black;
   }
 }
 
-.page-picker {
-  display: flex;
-  flex-direction: row;
-
-  input {
-    display: none;
-    width: 10px;
-    height: 10px;
-    opacity: 0;
-    position: absolute;
-    background: transparent;
-  }
-
-  input:checked ~ label {
-    cursor: default;
-    span {
-      color: $primary-color;
-    }
-  }
-  label {
-    cursor: pointer;
-    margin: 0 7px ;
-    background-color: transparent;
-    border: none;
-    font-weight: 500;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: #585858;
-  }
-  .dots {
-    color: #585858;
-    margin: 0 7px;
-  }
-}

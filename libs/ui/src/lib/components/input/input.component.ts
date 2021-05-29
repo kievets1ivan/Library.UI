@@ -21,6 +21,7 @@ export class InputComponent implements ControlValueAccessor, AfterViewInit {
   @Input() id: string;
   @Input() type: string;
   @Input() placeholder: string;
+  @Input() maxlength: number;
   @Input() src: string;
   @Input() alt: string;
   @Input() labelText: string;

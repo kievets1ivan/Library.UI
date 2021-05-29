@@ -9,6 +9,7 @@ import { HeaderModule } from './components/header/header.module';
 import { InputModule } from './components/input/input.module';
 import { TextareaModule } from './components/textarea/textarea.module';
 import { TitleModule } from './components/title/title.module';
+import { PopupModule } from './components/popup/popup.module';
 
 const MODULES = [
   CommonModule,
@@ -18,6 +19,7 @@ const MODULES = [
   InputModule,
   TextareaModule,
   TitleModule,
+  PopupModule,
 ]
 
 const MATMODULES = [

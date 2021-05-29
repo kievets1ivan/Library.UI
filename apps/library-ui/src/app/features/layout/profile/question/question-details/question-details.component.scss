@@ -1,0 +1,85 @@
+@import 'variables';
+a {
+  text-decoration: none;
+  color: $black;
+
+  :active {
+    background-color: $blur-primary-color;
+  }
+
+  .container {
+    display: flex;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 73px;
+    margin: 5px 0;
+    border-radius: 10px;
+
+    .img-container {
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 4px;
+
+      //mob
+      position: relative;
+      min-width: 63px;
+
+      img {
+        object-fit: cover;
+
+        //desk
+        // height: 100%;
+        // width: 16.5vw;
+
+        //mob
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    .details-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-grow: 1;
+      margin-left: 10px;
+      background-color: transparent;
+
+      .info-container {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        padding-right: 10px;
+        background-color: transparent;
+
+        .number {
+          font-weight: 700;
+          background-color: transparent;
+        }
+
+        .question {
+          background-color: transparent;
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .status-container {
+      display: flex;
+      align-items: center;
+
+      span {
+        height: 15px;
+        width: 15px;
+        border-radius: 10px;
+        background-color:  $attention-color;
+      }
+    }
+  }
+}

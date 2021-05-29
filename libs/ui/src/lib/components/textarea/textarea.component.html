@@ -1,6 +1,6 @@
 <div class="wrapper" [ngClass]="{'error-block': error}">
   <textarea [id]="id" [placeholder]="placeholder" [(ngModel)]="value" [maxlength]="maxlength"></textarea>
   <div class="counter">
-    {{ value.length }} / {{ maxlength }}
+    {{ value?.length === null ? '0': value.length }} / {{ maxlength }}
   </div>
 </div>

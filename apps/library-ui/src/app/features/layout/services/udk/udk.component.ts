@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 
-import { Udk, UdkService } from '@lib/common';
+import { PopupService, Udk, UdkService } from '@lib/common';
 
 const MAX_ANNOTATION_LENGTH = 350;
 
@@ -16,14 +16,15 @@ export class UdkComponent implements OnInit {
   public maxAnnotationLength: number;
   public isSubmitClicked = false;
 
-  public udkFormGroup = this.fb.group({
+  public udkFormGroup = this._fb.group({
     title: [''],
     annotation: [''],
   })
 
   constructor(
-    private fb: FormBuilder,
-    private udkService: UdkService,
+    private _fb: FormBuilder,
+    private _udkService: UdkService,
+    private _popupService: PopupService,
   ) { }
 
   public ngOnInit(): void {
@@ -41,7 +42,12 @@ export class UdkComponent implements OnInit {
       this.udk.title = this.udkFormGroup.get('title').value;
       this.udk.annotation = this.udkFormGroup.get('annotation').value;
 
-      this.udkService.createUdk(this.udk).subscribe();
+      this._udkService.createUdk(this.udk).subscribe(() => {
+        this._popupService.open('UDK').afterClosed().subscribe(() => {
+          this.udkFormGroup.reset();
+          this.isSubmitClicked = false;
+        });
+      });
     }
   }
 

@@ -62,4 +62,43 @@
       }
     }
   }
+
+  .menu-admin-container {
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
+    a {
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: column;
+      border-radius: 15px;
+      text-decoration: none;
+      padding: 10px 10px;
+
+      span {
+        color: white;
+        &.title {
+          font-size: 15px;
+          font-weight: 600;
+        }
+
+        &.desc {
+          font-size: 12px;
+          font-weight: 400;
+        }
+      }
+
+      &.repo {
+        background: linear-gradient(180deg, #63A18A 0.36%, #69A44D 2.85%, #579640 100%);
+      }
+
+      &.publications {
+        background: linear-gradient(180deg, #6F8ABE 0%, #6C89C0 100%);
+      }
+    }
+  }
 }

@@ -1,19 +1,26 @@
 <div class="wrapper">
-  <lib-title [title]="'SEARCH.TITLE'"></lib-title>
+  <lib-title *ngIf="searchSection?.id === 0" [title]="'SEARCH.TITLE'"></lib-title>
   <form class="form" [formGroup]="searchFormGroup" autocomplete="off">
-    <lib-input [id]="'searchTerm'" [type]="'text'" [placeholder]="'SEARCH.PLACEHOLDER' | translate"
-      [hasOnInputEvent]="true" formControlName="searchTerm" [src]="'assets/images/search/search.svg'"
-      (btnClickEmitter)="onClick()" required>
+    <lib-input *ngIf="searchSection?.id === 0" [id]="'searchTerm'" [type]="'text'"
+      [placeholder]="'SEARCH.PLACEHOLDER' | translate" [hasOnInputEvent]="true" formControlName="searchTerm"
+      [src]="'assets/images/search/search.svg'" (btnClickEmitter)="onClick()" required>
+    </lib-input>
+    <lib-input *ngIf="searchSection?.id !== 0" [id]="'searchTerm'" [type]="'text'"
+      [placeholder]="placeholderSectionName" [hasOnInputEvent]="true" formControlName="searchTerm"
+      [src]="'assets/images/search/search.svg'" (btnClickEmitter)="onClick()" required>
     </lib-input>
   </form>
 
-  <h1 *ngIf="!searchTermWasEntered else content">{{ 'WELCOME TO DOC SEARCH' | translate }}</h1>
+  <div *ngIf="!searchTermWasEntered && searchSection?.id === 0 else content" class="img-container">
+    <img [src]="'assets/images/robots/welcome-robot.svg'" alt="welcome-robot">
+  </div>
   <ng-template #content>
-    <h1 *ngIf="!retrievedDocuments.length">{{ 'NO CONTENT' | translate }}</h1>
+    <div *ngIf="!retrievedDocuments?.length" class="img-container">
+      <img [src]="'assets/images/robots/no-content-robot.svg'" alt="no-content-robot">
+    </div>
     <lib-document-list [documents]="retrievedDocuments"></lib-document-list>
   </ng-template>
-  <lib-pagination [hidden]="!searchTermWasEntered || !retrievedDocuments || !retrievedDocuments.length"
-    [getPaginationResults]="documentService.getDocumentsBySearchTerm.bind(documentService)"
-    [searchTerm]="inputSearchTerm">
+  <lib-pagination [hidden]="!retrievedDocuments || !retrievedDocuments.length"
+    [getPaginationResults]="documentService.getDocumentsBySearchParams.bind(documentService)">
   </lib-pagination>
 </div>

@@ -1,0 +1,72 @@
+<div class="wrapper">
+  <form [formGroup]="userFormGroup" class="info-container" autocomplete="off" (ngSubmit)="onSubmit()">
+
+    <div class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.STATUS_LABEL' | translate }}</div>
+      <div class="value">{{ user?.status }}</div>
+    </div>
+    <div class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.NUMBER_LABEL' | translate }}</div>
+      <div class="value">{{ user?.number | translate }}</div>
+    </div>
+    <div class="row-container">
+      <div class="label up">{{ 'PROFILE.INFO.LASTNAME_LABEL' | translate }}</div>
+      <div class="input-value">
+        <lib-input [id]="'lastName'" [type]="'text'" [placeholder]="''" [hasOnInputEvent]="true"
+          [error]="isInvalid('lastName')" formControlName="lastName" required></lib-input>
+        <label class="errors-label" *ngIf="isSubmitClicked && userFormGroup.get('lastName').errors?.required">{{
+          'INVALID_FIELD' | translate }}</label>
+      </div>
+    </div>
+    <div class="row-container">
+      <div class="label up">{{ 'PROFILE.INFO.FIRSTNAME_LABEL' | translate }}</div>
+      <div class="input-value">
+        <lib-input [id]="'firstName'" [type]="'text'" [placeholder]="''" [hasOnInputEvent]="true"
+          [error]="isInvalid('firstName')" formControlName="firstName" required></lib-input>
+        <label class="errors-label" *ngIf="isSubmitClicked && userFormGroup.get('firstName').errors?.required">{{
+          'INVALID_FIELD' | translate }}</label>
+      </div>
+    </div>
+    <div class="row-container">
+      <div class="label up">{{ 'PROFILE.INFO.PATRONYMIC_LABEL' | translate }}</div>
+      <div class="input-value">
+        <lib-input [id]="'patronymic'" [type]="'text'" [placeholder]="''" [hasOnInputEvent]="true"
+          [error]="isInvalid('patronymic')" formControlName="patronymic" required></lib-input>
+        <label class="errors-label" *ngIf="isSubmitClicked && userFormGroup.get('patronymic').errors?.required">{{
+          'INVALID_FIELD' | translate }}</label>
+      </div>
+    </div>
+    <div *ngIf="user?.faculty" class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.FACULTY_LABEL' | translate }}</div>
+      <div class="value">{{ user?.faculty }}</div>
+    </div>
+    <div *ngIf="user?.course" class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.COURSE_LABEL' | translate }}</div>
+      <div class="value">{{ user?.course }}</div>
+    </div>
+    <div *ngIf="user?.speciality" class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.SPECIALITY_LABEL' | translate }}</div>
+      <div class="value">{{ user?.speciality }}</div>
+    </div>
+    <div *ngIf="user?.department" class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.DEPARTMENT_LABEL' | translate }}</div>
+      <div class="value">{{ user?.department }}</div>
+    </div>
+    <div *ngIf="user?.position" class="row-container">
+      <div class="label">{{ 'PROFILE.INFO.POSITION_LABEL' | translate }}</div>
+      <div class="value">{{ user?.position }}</div>
+    </div>
+    <div class="row-container">
+      <div class="label up">{{ 'PROFILE.INFO.PHONENUMBER_LABEL' | translate }}</div>
+      <div class="input-value">
+        <lib-input [id]="'phone'" [type]="'text'" [placeholder]="''" [hasOnInputEvent]="true"
+          [error]="isInvalid('phone')" formControlName="phone"></lib-input>
+        <label class="errors-label" *ngIf="isSubmitClicked && userFormGroup.get('phone').errors?.pattern">{{
+          'INVALID_PHONE_PATTERN' | translate }}</label>
+      </div>
+    </div>
+    <div class="btn-container">
+      <button mat-button type="submit" class="main-btn-primary">{{ 'PROFILE.INFO.SAVE' | translate }}</button>
+    </div>
+  </form>
+</div>

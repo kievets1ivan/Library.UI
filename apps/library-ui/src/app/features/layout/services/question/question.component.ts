@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
-import { QuestionAnswer, QuestionAnswerService } from '@lib/common';
+import { PopupService, QuestionAnswer, QuestionAnswerService } from '@lib/common';
 
 const MAX_QUESTION_LENGTH = 200;
 
@@ -18,13 +18,14 @@ export class QuestionComponent implements OnInit {
   public maxLength: number;
   public isSubmitClicked = false;
 
-  public questionFormGroup = this.fb.group({
+  public questionFormGroup = this._fb.group({
     question: ['', [Validators.required]]
   })
 
   constructor(
-    private fb: FormBuilder,
-    private questionAnswerService: QuestionAnswerService,
+    private _fb: FormBuilder,
+    private _questionAnswerService: QuestionAnswerService,
+    private _popupService: PopupService,
   ) { }
 
   public ngOnInit(): void {
@@ -41,7 +42,12 @@ export class QuestionComponent implements OnInit {
     if (this.questionFormGroup.valid) {
       this.questionAnswer.question = this.questionFormGroup.get('question').value;
 
-      this.questionAnswerService.createQuestionAnswer(this.questionAnswer).subscribe();
+      this._questionAnswerService.createQuestionAnswer(this.questionAnswer).subscribe(() => {
+        this._popupService.open('QUESTION').afterClosed().subscribe(() => {
+          this.questionFormGroup.reset();
+          this.isSubmitClicked = false;
+        });
+      });
     }
   }
 

@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <library-udk-details class="udk-container" *ngFor="let udk of retrievedUdks" [udk]="udk">
+    <div class="border-container"
+      [ngStyle]="{'display': retrievedUdks.indexOf(udk) === retrievedUdks.length - 1 ? 'none' : 'block' }">
+    </div>
+  </library-udk-details>
+  <lib-pagination *ngIf="isAdmin" [hidden]="!retrievedUdks || !retrievedUdks.length"
+    [getPaginationResults]="udkService.getUdksForAdmin.bind(udkService)">
+  </lib-pagination>
+  <lib-pagination *ngIf="!isAdmin" [hidden]="!retrievedUdks || !retrievedUdks.length"
+    [getPaginationResults]="udkService.getUdks.bind(udkService)">
+  </lib-pagination>
+</div>

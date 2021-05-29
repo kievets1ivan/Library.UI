@@ -1,7 +1,7 @@
 export interface Section {
   id: number;
   name: string;
-  isTopSection: string;
+  isTopSection: boolean;
   imageFileName: string;
   documents: Document[];
 }

@@ -22,7 +22,7 @@ a {
 
       //mob
       position: relative;
-      width: 16.5vw;
+      min-width: 63px;
 
       img {
         object-fit: cover;
@@ -49,6 +49,10 @@ a {
       background-color: transparent;
 
       .info-container {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         padding-right: 10px;
         background-color: transparent;
 

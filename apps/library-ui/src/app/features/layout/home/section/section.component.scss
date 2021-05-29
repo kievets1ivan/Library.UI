@@ -1,0 +1,31 @@
+@import 'variables';
+a {
+  text-decoration: none;
+  color: $black;
+
+  :active {
+    background-color: $blur-primary-color;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+    .img-container {
+      height: 12vh;
+
+      img {
+        object-fit: cover;
+
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .name-container {
+      margin: 10px 0;
+    }
+  }
+}

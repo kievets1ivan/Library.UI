@@ -11,15 +11,9 @@
   background-color: $bg-color;
   color: $primary-color !important;
   height: 60px;
-  border-radius: 30px !important;
+  border-radius: 20px !important;
   border: solid 1px $primary-color !important;
   transition: 0.3s;
-  &:not(:disabled) {
-    &:hover {
-      cursor: pointer;
-      background-color: rgba(241, 241, 241, 0.2);
-    }
-  }
   &:disabled {
     opacity: 0.5;
   }
@@ -32,10 +26,7 @@
   border: solid 1px $primary-color !important;
   background-color: $primary-color;
   color: $bg-color !important;
-  &:not(:disabled) {
-    &:hover {
-      // background-color: #f1e3fc;
-      background-color: #e5cafa;
-    }
+  &:active {
+    background-color: #e5cafa;
   }
 }

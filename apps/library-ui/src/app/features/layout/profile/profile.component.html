@@ -1,3 +1,25 @@
-<p>
-  profile works!
-</p>
+<div class="wrapper">
+  <div class="main-container">
+    <div *ngIf="user?.gender" class="img-container">
+      <img *ngIf="user?.gender === 'Female'" src="/assets/images/gender/female.svg" alt="gender">
+      <img *ngIf="user?.gender === 'Male'" src="/assets/images/gender/male.svg" alt="gender">
+    </div>
+    <div class="second-main-container">
+      <div class="login-container">
+        <div>{{ user?.login }}</div>
+      </div>
+      <div class="number-container">
+        <div>{{ user?.number }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="links-container">
+    <a [routerLink]="['udks']" routerLinkActive="active-link">{{ 'PROFILE.UDK_LABEL' | translate }}</a>
+    <a [routerLink]="['questions']" routerLinkActive="active-link">{{ 'PROFILE.QUESTION_LABEL' | translate }}</a>
+    <a [routerLink]="['info']" routerLinkActive="active-link">{{ 'PROFILE.PROFILE' | translate }}</a>
+  </div>
+
+  <div class="router-wrapper">
+    <router-outlet #routerOutlet="outlet"></router-outlet>
+  </div>
+</div>

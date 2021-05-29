@@ -1,0 +1,72 @@
+@import 'variables';
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  .info-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: inherit;
+
+    .row-container {
+      display: flex;
+      flex-direction: row;
+
+      .input-value {
+        display: flex;
+        flex-direction: column;
+        height: 70px;
+
+        .errors-label {
+          display: inline-block;
+          margin-top: 5px;
+          font-size: 14px;
+          font-weight: 400;
+          color: $attention-color;
+        }
+      }
+
+      .label {
+        display: flex;
+        align-items: center;
+        min-width: 130px;
+        font-size: 16px;
+        font-weight: 600;
+        // line-height: 20px;
+
+        ~.value{
+          min-height: 34px;
+          display: flex;
+          align-items: center;
+        }
+
+        &.up {
+          padding-bottom: 20px;
+        }
+      }
+
+      .value {
+        font-family: 'Open Sans';
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+
+    button {
+      width: 280px;
+      height: 50px;
+    }
+  }
+}

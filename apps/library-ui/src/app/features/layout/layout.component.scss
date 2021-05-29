@@ -5,12 +5,17 @@
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
+  // background-color: aqua;
 
   .router-wrapper {
-    // background-color: lightblue; // remove
+    width: 50%;
     height: 100%;
-    margin: 0 20px;
+    // height: calc(100% - 70px);
+    padding: 0 20px;
+
+    // background-color: red;
   }
 
   .footer {
@@ -18,6 +23,7 @@
     justify-content: space-evenly;
     align-items: center;
     height: 70px;
+    width: 100%;
     border-top: 1px solid $text-color-primary;
     background-color: $bg-footer;
 
@@ -25,11 +31,19 @@
       display: flex;
       height: 30px;
       width: 30px;
-      // background-color: aqua;
     }
 
     .active-link {
-      filter: invert(56%) sepia(73%) saturate(5014%) hue-rotate(231deg) brightness(87%) contrast(93%);
+      filter: $activate-link-color;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  :host {
+
+    .router-wrapper {
+      width: 100%;
     }
   }
 }

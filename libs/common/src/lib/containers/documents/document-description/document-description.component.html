@@ -1,3 +1,45 @@
-<p>
-  document-description works!
-</p>
+<div class="wrapper">
+  <div class="main-container">
+    <div class="img-container">
+      <img [src]="imageService.getImage(document?.imageFileName)" alt="cover">
+    </div>
+    <div class="second-main-container">
+      <div class="author-container">
+        <div *ngFor="let item of document?.authorDocuments">{{ item.author.firstName + ' ' +
+          item.author.lastName}}</div>
+      </div>
+      <div class="title-container">
+        <div>{{ document?.title }}</div>
+      </div>
+    </div>
+  </div>
+  <div class="info-container">
+    <div class="row-container">
+      <div class="label">{{ 'DOCUMENT.CODE_LABEL' | translate }}</div>
+      <div class="value">{{ document?.id }}</div>
+    </div>
+    <div *ngIf="document?.documentType" class="row-container">
+      <div class="label">{{ 'DOCUMENT.TYPE_LABEL' | translate }}</div>
+      <div class="value">{{ type | translate }}</div>
+    </div>
+    <div *ngIf="document?.yearOfPublication" class="row-container">
+      <div class="label">{{ 'DOCUMENT.YEAR_LABEL' | translate }}</div>
+      <div class="value">{{ document?.yearOfPublication}}{{ 'DOCUMENT.SHORT_YEAR' | translate }}</div>
+    </div>
+    <div *ngIf="document?.publisher" class="row-container">
+      <div class="label">{{ 'DOCUMENT.PUBLISHER_LABEL' | translate }}</div>
+      <div class="value">{{ document?.publisher }}</div>
+    </div>
+    <div *ngIf="document?.language" class="row-container">
+      <div class="label">{{ 'DOCUMENT.LANGUAGE_LABEL' | translate }}</div>
+      <div class="value">{{ document?.language }}</div>
+    </div>
+    <div *ngIf="document?.pages" class="row-container">
+      <div class="label">{{ 'DOCUMENT.PAGES_LABEL' | translate }}</div>
+      <div class="value">{{ document?.pages }}{{ 'DOCUMENT.SHORT_AMOUNT' | translate }}</div>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button mat-button class="main-btn-primary" (click)="onClick()">{{ 'DOCUMENT.OPEN' | translate }}</button>
+  </div>
+</div>

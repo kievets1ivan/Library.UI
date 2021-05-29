@@ -1,6 +1,11 @@
 @import 'variables';
 
 .wrapper {
+
+  display: flex;
+  flex-direction: column;
+  // background-color: aquamarine;
+
   .header-container{
     display: flex;
     justify-content: space-between;
@@ -8,6 +13,8 @@
     color: $black;
     font-size: 18px;
     font-weight: 700;
+
+    // background-color: yellow;
 
     a {
       font-size: 14px;
@@ -19,32 +26,56 @@
 
   .top-section-container {
     display: flex;
-    width: calc(100vw - 40px);
-    overflow: auto;
     margin-top: 15px;
 
+    // background-color: blueviolet;
+
     .section {
-      min-width: 250px;
+      display: flex;
       margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       a {
         text-decoration: none;
         color: $black;
-        font-size: 15px;
-        font-weight: 600;
 
+        .img-container {
+          height: 130px;
 
-        .section-name {
-          margin-top: 5px;
-          height: 30px;
+          img {
+            object-fit: cover;
+
+            border-radius: 5px;
+            height: 100%;
+            width: 100%;
+          }
         }
 
-        img {
-          border-radius: 5px;
-          height: 120px;
-          width: 100%;
+        .section-name {
+          font-size: 15px;
+          font-weight: 600;
+          margin: 10px 0;
         }
       }
     }
   }
 }
+
+
+@media (max-width: 600px) {
+  .wrapper {
+    .top-section-container {
+      overflow-x: scroll;
+
+      // background-color: yellow;
+
+      .section {
+        flex: 0 0 200px;
+      }
+    }
+  }
+}
+

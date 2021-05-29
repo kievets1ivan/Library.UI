@@ -1,16 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs';
 import { range } from 'lodash-es';
 
 import { PaginationService } from '../../pagination/pagination.service';
 import { PaginationResponse } from '../../../models/pagination/pagination-response';
+import { Section } from '@lib/common';
 
 @Component({
   selector: 'lib-pagination',
   templateUrl: './pagination.component.html',
   styleUrls: ['./pagination.component.scss']
 })
-export class PaginationComponent<T> implements OnInit {
+export class PaginationComponent<T> {
 
   public objects: T[];
   public pageNumber = 1;
@@ -18,29 +19,25 @@ export class PaginationComponent<T> implements OnInit {
   public totalPages: number;
   public hasNext = false;
   public hasPrevious = false;
-  private _searchTerm = '';
+  public searchParams: { searchTerm: string, section: Section } = {
+    searchTerm: '',
+    section: {
+      id: 0,
+      name: '',
+      isTopSection: false,
+      imageFileName: '',
+      documents: []
+    },
+  }
 
   @Input() getPaginationResults: (config?: {}) => Observable<PaginationResponse<T>>;
-
-  @Input() set searchTerm(value: string) {
-    this._searchTerm = value;
-    this.applyPaging();
-  }
-
-  get searchTerm(): string {
-    return this._searchTerm;
-  }
 
   constructor(
     private paginationService: PaginationService<T>
   ) { }
 
-  public ngOnInit(): void {
-    this.applyPaging();
-  }
-
   public applyPaging(): void {
-    this.getPaginationResults({ pageSize: this.pageSize, pageNumber: this.pageNumber, searchTerm: this.searchTerm }).subscribe(
+    this.getPaginationResults({ pageSize: this.pageSize, pageNumber: this.pageNumber, searchTerm: this.searchParams.searchTerm, sectionId: this.searchParams?.section?.id }).subscribe(
       (res: PaginationResponse<T>) => {
         this.pageSize = res.pageSize;
         this.pageNumber = res.pageNumber;
@@ -69,7 +66,7 @@ export class PaginationComponent<T> implements OnInit {
   }
 
   public pagesToDisplay(pageNumber: number): number[] {
-    return range(pageNumber - 2, pageNumber + 3);
+    return range(pageNumber - 1, pageNumber + 2);
   }
 
 }

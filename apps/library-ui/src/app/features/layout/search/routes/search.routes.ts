@@ -6,10 +6,19 @@ import { SearchComponent } from './../search.component';
 export const routes: Routes = [
   {
     path: '',
-    component: SearchComponent,
-  },
-  {
-    path: 'document/:id',
-    component: DocumentDescriptionComponent,
+    children: [
+      {
+        path: '',
+        component: SearchComponent,
+      },
+      {
+        path: 'document/:id',
+        component: DocumentDescriptionComponent,
+      },
+      {
+        path: 'section',
+        component: SearchComponent,
+      },
+    ],
   },
 ];

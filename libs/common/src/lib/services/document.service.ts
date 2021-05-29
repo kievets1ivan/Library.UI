@@ -25,9 +25,13 @@ export class DocumentService {
     return this.http.get<LibraryDocument[]>(`${documentApiRequest}/query`, { withCredentials: true, params });
   }
 
-  public getDocumentsBySearchTerm(config: SearchDocumentQueryParams): Observable<PaginationResponse<LibraryDocument>> {
+  public getDocumentsBySearchParams(config: SearchDocumentQueryParams): Observable<PaginationResponse<LibraryDocument>> {
     const params = convertToHttpParams(config);
     return this.http.get<PaginationResponse<LibraryDocument>>(`${documentApiRequest}`, { withCredentials: true, params });
+  }
+
+  public getDocumentById(documentId: number): Observable<LibraryDocument> {
+    return this.http.get<LibraryDocument>(`${documentApiRequest}/${documentId}`, { withCredentials: true });
   }
 
 }

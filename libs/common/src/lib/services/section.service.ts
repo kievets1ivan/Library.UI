@@ -17,9 +17,13 @@ export class SectionService {
     private http: HttpClient,
   ) { }
 
-  public getTopSections(isTopSection: boolean): Observable<Section[]> {
+  public getTopSections(isTopSection?: boolean): Observable<Section[]> {
     const params = convertToHttpParams({ isTopSection });
     return this.http.get<Section[]>(`${sectionApiRequest}`, { withCredentials: true, params });
+  }
+
+  public getById(sectionId: number): Observable<Section> {
+    return this.http.get<Section>(`${sectionApiRequest}/${sectionId}`, { withCredentials: true });
   }
 
 }

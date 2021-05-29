@@ -36,6 +36,10 @@ export class AuthService {
   //   };
   // }
 
+  public getUserRole(): string {
+    return this.jwtService.getUserRole();
+  }
+
   public get isLoggedIn(): boolean {
     return !!this.cookie.get('Token');
   }

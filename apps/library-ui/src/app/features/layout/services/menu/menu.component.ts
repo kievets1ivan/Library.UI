@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@lib/common';
 
 @Component({
   selector: 'library-menu',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public get isAdmin() {
+    return this.authService.getUserRole() === 'Admin' ? true : false;
+  }
+
+  constructor(
+    private authService: AuthService,
+  ) { }
 
   ngOnInit() {
   }
